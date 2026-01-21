@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>about me</title>
+  <title>ordain-portfolio</title>
   <link rel="stylesheet" href="index.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_back_ios_new" />
@@ -49,18 +49,110 @@
         <p><img src="css-icon.png" alt="css-icon"> CSS</p>
         <p><img src="js-icon.png" alt="js-icon"> JavaScript (DOM manipulation, events, basic logic)</p>
       </div>
-      <div class="security" id="security">
-        <span>for all hidden info:</span>
-        <button id="passcode-btn">enter passcode</button>
-      </div>
-      <div>
-        <p id="messages">...</p>
-      </div>
-      <div class="bio-cover" id="bio-cover">
-        <div class="bio">
-
+      <div class="low-content">
+        <div class="toggles">
+          <div class="panel active" id="projects-panel">projects</div>
+          
+          <div class="panel" id="contact-panel">contact</div>
         </div>
+        <div class="content active" id="projects-content">
+          <h4>My Projects</h4>
 
+          <p>
+            These projects represent my hands-on journey in understanding Machine Learning
+            systems from first principles — from manual optimization to building automated
+            learning engines similar in spirit to PyTorch and micrograd.
+          </p>
+          <br>
+          <hr>
+          <br>
+          <!-- Project 1 -->
+          <h5>1. tinyLinearModel (Manual Learning)</h5>
+          <p>
+            A minimal linear regression model trained using manually written forward pass,
+            loss calculation, and parameter updates.
+            This project demonstrates my understanding of:
+          </p>
+          <ul>
+            <li>Forward propagation</li>
+            <li>Loss functions</li>
+            <li>Gradient-based optimization</li>
+            <li>Learning dynamics</li>
+          </ul>
+          <p>
+            <a href="https://github.com/Ordnmash/tinyLinearModel" target="_blank">
+              View on GitHub → tinyLinearModel (manual)
+            </a>
+          </p>
+
+          <hr>
+          <br>
+          <!-- Project 2 -->
+          <h5>2. autoLinearModel (Automated Training Engine)</h5>
+          <p>
+            An extension of the linear model where the training logic is abstracted away
+            from the model itself.
+            The model only defines what to compute, while the engine handles learning.
+          </p>
+          <ul>
+            <li>Separation of model and optimizer logic</li>
+            <li>Reusable training routines</li>
+            <li>Early abstraction design</li>
+          </ul>
+          <p>
+            <a href="https://github.com/Ordnmash/Autograd" target="_blank">
+              View on GitHub → autoLinearModel (uses Autograd)
+            </a>
+          </p>
+
+          <hr>
+          <br>
+          <!-- Project 3 -->
+          <h5>3. Autograd Engine (From Scratch)</h5>
+          <p>
+            A foundational automatic differentiation-style system that centralizes
+            gradient computation and parameter updates.
+            This project is inspired by frameworks like micrograd and PyTorch,
+            but implemented from scratch to deeply understand:
+          </p>
+          <ul>
+            <li>Gradient flow</li>
+            <li>Backpropagation mechanics</li>
+            <li>Optimization pipelines</li>
+            <li>Framework-level ML design</li>
+          </ul>
+          <p>
+            <a href="https://github.com/Ordnmash/Autograd" target="_blank">
+              View on GitHub → Autograd (engine)
+            </a>
+          </p>
+
+          <hr>
+
+          <p>
+            These projects form the foundation for my next steps:
+            character-level language models, neural networks, and transformer-based systems.
+          </p>
+        </div>
+        <div class="content" id="contact-content">
+          <h4>contact me:</h4>
+
+          <p>If you'd like to get in touch for opportunities, collaboration, or questions, feel free to reach out:</p>
+
+          <div class="contact-list">
+            <p>
+              <strong>Email:</strong>
+              <a href="mailto:ordnfxist@gmail.com">ordnfxist@gmail.com</a>
+            </p>
+
+            <p>
+              <strong>WhatsApp:</strong>
+              <a href="https://wa.me/27791859943" target="_blank">
+                +27 79 185 9943
+              </a>
+            </p>
+          </div>
+        </div>
       </div>
     </div>
     <script src="index.js"></script>    

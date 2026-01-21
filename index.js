@@ -13,57 +13,23 @@ function ageUpdate(){
 
 ageUpdate();
 
-const passcode = "mash3Nine";
-const security = document.getElementById("security");
-const message = document.getElementById("messages");
-const bio = document.getElementById("bio-cover");
+const toggles = document.querySelector(".toggles");
+const panels = document.querySelectorAll(".panel");
+const contents = document.querySelectorAll(".content");
 
-security.addEventListener("click", function (e) {
+toggles.addEventListener("click", (e) => {
+  const panel = e.target.closest(".panel");
+  if (!panel) return; // click wasn't on a panel
 
-  if (e.target.id === "passcode-btn") {
-    enterpass();
-  }
+  // Remove active from all panels & contents
+  panels.forEach(p => p.classList.remove("active"));
+  contents.forEach(c => c.classList.remove("active"));
 
-  if (e.target.id === "back") {
-    closeInput();
-  }
+  // Activate clicked panel
+  panel.classList.add("active");
 
-  if (e.target.id === "submit") {
-    submitCode();
-  }
+  // Figure out which content to show
+  const name = panel.id.replace("-panel", "");
+  document.getElementById(`${name}-content`).classList.add("active");
 });
 
-function enterpass() {
-  security.innerHTML = `
-    <span class="material-symbols-outlined" id="back">
-      arrow_back_ios_new
-    </span>
-    <input type="text" id="input-passcode" placeholder="Enter passcode">
-    <button id="submit">submit</button>
-  `;
-}
-
-function closeInput() {
-  security.innerHTML = `
-    <span>for all hidden info:</span>
-    <button id="passcode-btn">enter passcode</button>
-  `;
-  message.innerText = "";
-}
-
-function submitCode() {
-  const codeValue = document.getElementById("input-passcode").value;
-
-  if (!codeValue) {
-    message.innerText = "enter code";
-    return;
-  }
-
-  if (codeValue === passcode) {
-    bio.classList.add("show");
-    message.innerText = "access granted";
-    security.innerHTML = ``;
-  } else {
-    message.innerText = "incorrect code!";
-  }
-}
