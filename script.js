@@ -1,16 +1,36 @@
-const summarybtn = document.getElementById("summary-btn");
-const projectsbtn = document.getElementById("projects-btn");
-const detailsbtn = document.getElementById("details-btn");
-const commentbtn = document.getElementById("comment_");
+const summarybtn      = document.getElementById("summary-btn");
+const projectsbtn     = document.getElementById("projects-btn");
+const detailsbtn      = document.getElementById("details-btn");
+const topmenubtn      = document.getElementById("topmenu");
+const commentbtn      = document.getElementById("comment_");
 const closeCommentbtn = document.getElementById("closeComment-btn");
-const sendCommentbtn = document.getElementById("sendComment-btn");
+const sendCommentbtn  = document.getElementById("sendComment-btn");
 
-const summarySection = document.getElementById("summary-section");
+const summarySection  = document.getElementById("summary-section");
 const projectsSection = document.getElementById("projects-section");
-const detailsSection = document.getElementById("details-section");
-const outint = document.getElementById("outint");
-const inint = document.getElementById("inint");
-const commentInput = document.getElementById("comment_to");
+const detailsSection  = document.getElementById("details-section");
+const outint          = document.getElementById("outint");
+const inint           = document.getElementById("inint");
+const commentInput    = document.getElementById("comment_to");
+const topmenushow     = document.getElementById("right-tv");
+const topmenublank    = document.getElementById("topmenu-blank");
+const tvnames         = document.getElementById("tv-names");
+const righttv         = document.getElementById("right-tv");
+
+topmenubtn.addEventListener("click", function(){
+  topmenushow.classList.add("active");
+  tvnames.classList.add("notactive");
+  topmenublank.classList.add("active");
+  topmenubtn.classList.remove("active");
+  righttv.classList.add("active");
+});
+topmenublank.addEventListener("click", function(){
+  topmenushow.classList.remove("active");
+  tvnames.classList.remove("notactive");
+  topmenublank.classList.remove("active");
+  topmenubtn.classList.add("active");
+  righttv.classList.remove("active")
+});
 
 commentbtn.addEventListener("click", function(){
   outint.classList.remove("active");
@@ -41,6 +61,10 @@ summarybtn.addEventListener("click", function(){
   summarySection.classList.add("active");
   projectsSection.classList.remove("active");
   detailsSection.classList.remove("active");
+  tvnames.classList.remove("notactive");
+  topmenublank.classList.remove("active");
+  topmenubtn.classList.add("active");
+  righttv.classList.remove("active")
 });
 projectsbtn.addEventListener("click", function(){
   projectsbtn.classList.add("active");
@@ -51,6 +75,11 @@ projectsbtn.addEventListener("click", function(){
   projectsSection.classList.add("active");
   summarySection.classList.remove("active");
   detailsSection.classList.remove("active");
+  topmenublank.classList.remove("active");
+  tvnames.classList.remove("notactive");
+  topmenublank.classList.remove("active");
+  topmenubtn.classList.add("active");
+  righttv.classList.remove("active")
 });
 detailsbtn.addEventListener("click", function(){
   detailsbtn.classList.add("active");
@@ -61,6 +90,11 @@ detailsbtn.addEventListener("click", function(){
   detailsSection.classList.add("active");
   projectsSection.classList.remove("active");
   summarySection.classList.remove("active");
+  topmenublank.classList.remove("active");
+  tvnames.classList.remove("notactive");
+  topmenublank.classList.remove("active");
+  topmenubtn.classList.add("active");
+  righttv.classList.remove("active")
 });
 
 const ca = document.getElementById("current-age");
