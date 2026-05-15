@@ -1,198 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ordn</title>
-  <link rel="stylesheet" href="index.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_back_ios_new" />
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-</head>
-<body>
-  <div class="outer">
-    <div class="profile-photo">
-      <div class="photo-cover">
-        <img src="image1-no-bg.png" alt="my-photo">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+    <title>portfolio web</title>
+  </head>
+  <body>
+    <div class="topview">
+      <h3 class="names" id="tv-names">ordain mthembeni</h3>
+      <div class="right-tv"><p class="summary-btn active" id="summary-btn">summary</p><p class="projects-btn" id="projects-btn">projects</p><p class="details-btn" id="details-btn">details</p></div>
+    </div>
+    <div class="pd-section" id="summary-section">
+      <div class="smm-head">
+        <div class="threedots">
+          <div class="red"></div>
+          <div class="yellow"></div>
+          <div class="green"></div>
+        </div>
+        <div class="headline">
+          <h3 class="prince">backprop ninja</h3>
+        </div>
       </div>
-    </div>
-
-    <div class="my-details">
-      <h4>last name:</h4>
-      <p>mthembeni</p>
-      <h4>names:</h4>
-      <p>ordain enough</p>
-      <h4>date of birth:</h4>
-      <p>2007-06-13</p>
-      <h6 class="age-content">current age: <p id="current-age"></p></h6>
-    </div>
-
-    <div class="public-bio">
-      <p>>I love working on neural networks, LLMs and reading some Deep Learning or ML
-        research papers, what excites me the most is the execution of the idea to code!
-      </p>
-    </div>
-
-    <div class="skills">
-      <h3>my skills:</h3>
-
-      <h5>machine learning:</h5>
-      <p><img src="python-icon.png" alt="python-icon"> Python</p>
-      <span>
-        experimenting with small-scale language models (Bigram),<br>
-        manual implementation of forward and backward passes,<br>
-        optimization via gradient descent, loss minimization,<br>
-        - building tiny libraries like autograd <br>
-        and explaining ML concepts through first-principles teaching
-      </span>
-
-      <h5>web dev -frontend-</h5>
-      <p><img src="html-icon.png" alt="html-icon"> HTML</p>
-      <p><img src="css-icon.png" alt="css-icon"> CSS</p>
-      <p><img src="js-icon.png" alt="js-icon"> JavaScript (DOM manipulation, events, basic logic)</p>
-    </div>
-
-    <div class="low-content">
-      <div class="toggles">
-        <div class="panel active" id="projects-panel">projects</div>
-        <div class="panel" id="contact-panel">contact</div>
+      <div class="profile">
+        <div class="pphoto">
+          <img src="1777905072007.png" alt="human">
+        </div>
+        <div class="pd-cover">
+          <div class="pdetails">
+            <h3 class="names">first name:</h3>
+            <p>ordain</p>
+            <h3>second name:</h3>
+            <p>enough</p>
+            <h3>last name:</h3>
+            <p>mthembeni</p>
+            <h3>date-of-birth:</h3>
+            <p>2007-06-13</p>
+            <h3>current age:</h3>
+            <p id="current-age"></p>
+          </div>
+        </div>
       </div>
-
-      <div class="content active" id="projects-content">
-        <h4>My Projects</h4>
-
-        <p>
-          These projects represent my hands-on journey in understanding Machine Learning
-          systems from first principles — from manual optimization to building automated
-          learning engines similar in spirit to PyTorch and micrograd.
-        </p>
-
-        <br>
-        <hr>
-        <br>
-
-        <!-- Project 1 -->
-        <h5>1. tinyLinearModel (Manual Learning)</h5>
-        <p>
-          A minimal linear regression model trained using manually written forward pass,
-          loss calculation, and parameter updates.
-        </p>
-        <ul>
-          <li>Forward propagation</li>
-          <li>Loss functions</li>
-          <li>Gradient-based optimization</li>
-          <li>Learning dynamics</li>
-        </ul>
-        <p>
-          <a href="https://github.com/Ordnmash/tinyLinearModel" target="_blank">
-            View on GitHub → tinyLinearModel (manual)
-          </a>
-        </p>
-
-        <hr>
-        <br>
-
-        <!-- Project 2 -->
-        <h5>2. autoLinearModel (Automated Training Engine)</h5>
-        <p>
-          An extension of the linear model where the training logic is abstracted away
-          from the model itself.
-        </p>
-        <ul>
-          <li>Separation of model and optimizer logic</li>
-          <li>Reusable training routines</li>
-          <li>Early abstraction design</li>
-        </ul>
-        <p>
-          <a href="https://github.com/Ordnmash/Autograd" target="_blank">
-            View on GitHub → autoLinearModel (uses Autograd)
-          </a>
-        </p>
-
-        <hr>
-        <br>
-
-        <!-- Project 3 -->
-        <h5>3. Autograd Engine (From Scratch)</h5>
-        <p>
-          A foundational automatic differentiation-style system that centralizes
-          gradient computation and parameter updates.
-        </p>
-        <ul>
-          <li>Gradient flow</li>
-          <li>Backpropagation mechanics</li>
-          <li>Optimization pipelines</li>
-          <li>Framework-level ML design</li>
-        </ul>
-        <p>
-          <a href="https://github.com/Ordnmash/Autograd" target="_blank">
-            View on GitHub → Autograd (engine)
-          </a>
-        </p>
-
-        <hr>
-        <br>
-
-        <!-- Project 4 -->
-        <h5>4. PYNE – Neural Network Engine (From Scratch)</h5>
-        <p>
-          A tensor-based neural network engine built entirely from scratch, focused on
-          understanding deep learning systems at a fundamental level.
-        </p>
-
-        <p>
-          PYNE implements backpropagation directly on tensors, supports broadcasting,
-          and tracks gradients across full computational graphs — bringing it closer
-          to real-world deep learning frameworks.
-        </p>
-
-        <ul>
-          <li>Tensor-based computation</li>
-          <li>Manual backpropagation (autograd)</li>
-          <li>Broadcasting support</li>
-          <li>Gradient tracking for all parameters</li>
-          <li>Neural network modules (MLP, layers)</li>
-        </ul>
-
-        <p>
-          <a href="https://github.com/Ordnmash/Pyne" target="_blank">
-            View on GitHub → PYNE (Neural Engine)
-          </a>
-        </p>
-
-        <hr>
-
-        <p>
-          These projects form the foundation for my next steps:
-          character-level language models, neural networks, and transformer-based systems,
-          with PYNE as my core experimental deep learning engine.
+      <div class="bio">
+        <p>I love training neural nets,
+          <br> Large Language Models "LLMs", tiny interactive models like games AI 
+          <br>Building simple tools about deep learning such as deep learning frameworks.
+          <br>Autograd engines that simplify all the details from scratch. famously known for <a href="">Pyne Framework</a>
         </p>
       </div>
-
-      <div class="content" id="contact-content">
-        <h4>contact me:</h4>
-
-        <p>If you'd like to get in touch for opportunities, collaboration, or questions, feel free to reach out:</p>
-
-        <div class="contact-list">
-          <p>
-            <strong>Email:</strong>
-            <a href="mailto:ordnfxist@gmail.com">ordnfxist@gmail.com</a>
-          </p>
-
-          <p>
-            <strong>WhatsApp:</strong>
-            <a href="https://wa.me/27791859943" target="_blank">
-              +27 79 185 9943
-            </a>
-          </p>
+      <div class="interactions">
+        <div class="outint active" id="outint">
+          <span class="material-symbols-outlined">volume_up</span>
+          <span class="material-symbols-outlined" id="comment_">comment</span>
+          <span class="material-symbols-outlined">thumb_up</span>
+          <span class="material-symbols-outlined">thumb_down</span>
+        </div>
+        <div class="inint" id="inint">
+          <input type="text" id="comment_to" placeholder="add comment...">
+          <span class="material-symbols-outlined active" id="closeComment-btn">close</span>
+          <span class="material-symbols-outlined" id="sendComment-btn">send</span>
         </div>
       </div>
     </div>
-  </div>
-
-  <script src="index.js"></script>    
-</body>
-  </html>
+    <div class="projects" id="projects-section">
+      <div class="summary-projects"><h4>most projects taged here are associated with deep learning</h4></div>
+      <div class="fstproject">
+        <h3>Pyne Framework</h3>
+        <div class="details_project">
+          <p class="expl">pyne framework is tiny Pytorch alike framework - implements Autograd, Tensor element-wise operations,
+            matrix multiplication, almost every useful tensor operation for deep learning in torch, this Project is open source
+            for Deep Learning Frameworks behind the scenes, <br> note: it doesn't do exactly what real framework do!
+            some steps are implementant according to my understanding... 
+          </p>
+          <div class="pynedet">
+            <img src="1777913643506.png" alt="pyneImage">
+          </div>
+          <div class="example">
+            <p>
+              a = pyne.tensor([[2.0, -3.0], [4.0, -2.0]], requires_grad=True)
+              <br>b = pyne.randn((2, 2), requires_grad=True)
+              <br>c = a * b
+              <br>c.shape  <span><i># pyne.Size([2, 2])</i></span>
+            </p>
+          </div>
+          <div class="links">
+            <a href="https://github.com/Ordnmash/Pyne">--View pyne framework on GitHub--</a>
+          </div>
+        </div>
+      </div>
+      <div class="fstproject">
+        <h3>tinyLinearModel (Manual Learning)</h3>
+        <div class="details_project">
+          <p class="expl">A minimal linear regression model trained using manually written forward pass, loss calculation, and parameter updates. <br>
+            <br>Forward propagation
+            <br>Loss functions
+            <br>Gradient-based optimization
+            <br>Learning dynamics
+          </p>
+          <div class="links">
+            <a href="https://github.com/Ordnmash/tinyLinearModel">--View tinyLinearModel on GitHub--</a>
+          </div>
+        </div>
+      </div>
+      <div class="fstproject">
+        <h3>Autograd Engine (Basic)</h3>
+        <div class="details_project">
+          <p class="expl">A foundational automatic differentiation-style system that centralizes gradient computation and parameter updates. <br>
+            <br>Gradient flow
+            <br>Backpropagation mechanics
+            <br>Optimization pipelines
+            <br>Framework-level ML design
+          </p>
+          <div class="links">
+            <a href="https://github.com/Ordnmash/Autograd">--View Autograd Engine on GitHub--</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="details active" id="details-section">
+      <div class="alldetails">
+        <h5>summary details</h5>
+        <div class="personal">
+          <p class="dir">I'm very passionated about deep learning engineer and looking forward to improve the limitations we have in this industry. <br>
+          the future of civilization is in our hands, means we're the future, we'll make it happen! <br> 
+          </p>
+          <div class="contact">
+            <p>GitHub: <a href="https://github.com/Ordnmash">Ordn Git-</a></p>
+            <p>mail : <a href="mailto:ordnmash@gmail.com">ordnfmash@gmail.com</a></p>
+            <p>phone: +27 79 185 9943</p>
+            <p>whatsapp: <a href="https://wa.me/27791859943" target="_blank">WA Ordn</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
