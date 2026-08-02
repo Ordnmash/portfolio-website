@@ -46,7 +46,7 @@
       </div>
       <div class="bio">
         <p>I love training neural nets,
-          <br> Large Language Models "LLMs", tiny interactive models like games AI 
+          <br> Large Language Models "LLMs", tiny interactive models like games AI. 
           <br>Building simple tools about deep learning such as deep learning frameworks.
           <br>Autograd engines that simplify all the details from scratch. View my Deep Learning framework -> <a href="https://github.com/Ordnmash/Pyne">Pyne</a>
         </p>
@@ -56,9 +56,9 @@
           <span class="material-symbols-outlined" id="comment_">comment</span>
         </div>
         <div class="inint" id="inint">
-          <input type="text" id="comment_to" placeholder="add comment...">
+          <input type="text" id="comment_to" placeholder="quick message...">
           <span class="material-symbols-outlined active" id="closeComment-btn">close</span>
-          <span class="material-symbols-outlined" id="sendComment-btn">send</span>
+          <span class="material-symbols-outlined" id="sendComment-btn"><a href="mailto:ordnmash@gmail.com">send</a></span>
         </div>
       </div>
     </div>
@@ -81,10 +81,73 @@
               <br>b = pyne.randn((2, 2), requires_grad=True)
               <br>c = a * b
               <br>c.shape  <span><i># pyne.Size([2, 2])</i></span>
+              <br>c.backward() <span><i># computes dC/dA, dC/dB (gradients of inputs in respect to final step)</i></span>
             </p>
           </div>
           <div class="links">
             <a href="https://github.com/Ordnmash/Pyne">--View pyne framework on GitHub--</a>
+          </div>
+        </div>
+      </div>
+      <div class="fstproject">
+        <h3>GitMore v1</h3>
+        <div class="details_project">
+          <p class="expl"><b>Gitmore v1</b> is an NN model built on ANN - MLP, with the dataset of git commits messages.<br>
+            <br>The dataset is collected from the Cpython open source code to train the model to generate the Git commits learned from data.<br>
+            the length of the dataset is roughly 180k of commits strings <br>
+            <br>
+            The model size is <b>265k parameters</b> and <b>13 layers</b>
+          </p>
+          <div class="pynedet">
+            <img src="gitmore_model_learning.png" alt="GitmoreImage">
+          </div>
+          <div class="links">
+            <a href="https://github.com/Ordnmash/Gitmore-v1">--View GitMore v1 on GitHub--</a>
+          </div>
+        </div>
+      </div>
+      <div class="fstproject">
+        <h3>GitMore v2.0</h3>
+        <div class="details_project">
+          <p class="expl">Gitmore v2.0 is an NN model built on <b>(Recurrent Neural Networks entirely)</b>, with the dataset of git commits messages.<br>
+            <br>The <b>Gitmore v2.0 is twice smaller</b> than the v1 built on MLP with context window.<br>
+            <br>One other good thing about the v2.0 model is that I was able to beat the previous model's training and validation loss, even with fewer epochs and smaller size of the model.
+          </p>
+          <div class="pynedet">
+            <img src="gitmore_logo.png" alt="GitmoreImage">
+          </div>
+          <div class="links">
+            <a href="https://github.com/Ordnmash/Gitmore-v2.0">--View GitMore v2.0 on GitHub--</a>          </div>
+        </div>
+      </div>
+      <div class="fstproject">
+        <h3>GitMore v2.1</h3>
+        <div class="details_project">
+          <p class="expl">Gitmore v2.1 is an NN model built on <b>(Recurrent Neural Networks and extended Context window)</b>, with the dataset of git commits messages.<br><br>
+            <b>The size of this model is <b>twice bigger than the v2.0 model</b>, means it's equal to v1</b><br>
+            <br>With GitMore v2.1 I was able to achieve even <b><i>lower loss of 1.02</i></b>, The commits comming out of the model were even more surprising they were very good.<br>
+            <br>Because the model was given the Context with every step of character prediction and the model carrying forward its memory -> it was a very good point that the model would be capable of solving the problem even better! 
+          </p>
+          <div class="pynedet">
+            <img src="gitmore_logo.png" alt="GitmoreImage">
+          </div>
+          <div class="links">
+            <a href="https://github.com/Ordnmash/Gitmore-v2.1">--View GitMore v2.1 on GitHub--</a>          </div>
+        </div>
+      </div>
+      <div class="fstproject">
+        <h3>GitMore v2.15</h3>
+        <div class="details_project">
+          <p class="expl">Gitmore v2.15 is an NN model built on <b>(Recurrent Neural Networks and extended Context window) && with solution to vanishing gradients in RNN.</b><br>
+            <br>GitMore v2.15 is built to improve the problem we had with GitMore v2.1, which was the problem of vanishing gradients.<br>
+            <br>My solution in this situation was to implement the BatchNorm layer within the RNN itself, this allow the data to be normalized before going through squashing activation <b>'Tanh'</b><br> 
+            <br>The size of this model is <b>270k parameters</b> and I achieved a very good <b>loss of '<0.88>'</b>
+          </p>
+          <div class="pynedet">
+            <img src="gitmore_logo.png" alt="GitmoreImage">
+          </div>
+          <div class="links">
+            <a href="https://github.com/Ordnmash/Gitmore-v2.15">--View GitMore v2.15 on GitHub--</a>
           </div>
         </div>
       </div>
@@ -98,7 +161,7 @@
             this is actually fun btw I will deploy it into web app to actually play with it... 
           </p>
           <div class="pynedet">
-            <img src="tictactoeTiny_robot.jpeg" alt="pyneImage">
+            <img src="tictactoeTiny_robot.jpeg" alt="tttModelImage">
           </div>
           <div class="links">
             <a href="https://github.com/Ordnmash/TicTacToe-Self-learning-Engine">--View Tictactoe Self-Learn Engine on GitHub--</a>
@@ -139,9 +202,8 @@
         <h5>summary details</h5>
         <div class="personal">
           <p class="dir">I love working with neural networks and training them, yet there's still a lot more to explore in this field! <br>
-            The reason I love this field/industry is that AI is the future of computing and computing is the future of humanity! <br>
-            Yet this AI future should evolve in good hands, hands that know exactly where to look at, when AI hits the bottle-neck... <br>
-            Hands that could control the model's path... and I'm working on deep building blocks of Neural Networks (Brain of AI). <br>
+            AI should evolve in good hands, hands that know exactly where to look at, when it hits the bottle-neck... <br>
+            I'm working on deep building blocks of Neural Networks (Brain of AI). <br>
             This is what consumes my entire day, I'm so happy with it!
           </p>
           <div class="contact">
