@@ -1,2 +1,1 @@
-# portfolio-website
-this is my portfolio web page where my info and details are shared
+## Ordn Mash (Ordain Mthembeni) Portfolio web
