@@ -17,6 +17,10 @@ const topmenublank    = document.getElementById("topmenu-blank");
 const tvnames         = document.getElementById("tv-names");
 const righttv         = document.getElementById("right-tv");
 
+const red             = document.getElementById("red");
+const yellow          = document.getElementById("yellow");
+const green           = document.getElementById("green");
+
 topmenubtn.addEventListener("click", function(){
   topmenushow.classList.add("active");
   tvnames.classList.add("notactive");
@@ -46,6 +50,32 @@ commentbtn.addEventListener("click", function(){
     };
   }, 1);
 });
+
+function animateColors(){
+  let nowon = Math.random() * 3;
+  setInterval(() =>{
+    if (nowon <= 1){
+      red.classList.add('active');
+      yellow.classList.remove('active');
+      green.classList.remove('active');
+      nowon = Math.random() * 3;
+    }
+    else if (nowon <= 2){
+      red.classList.remove('active');
+      yellow.classList.add('active');
+      green.classList.remove('active');
+      nowon = Math.random() * 3;
+    }
+    else {
+      red.classList.remove('active');
+      yellow.classList.remove('active');
+      green.classList.add('active');
+      nowon = Math.random() * 3;
+    }
+  }, 150);
+};
+animateColors();
+
 closeCommentbtn.addEventListener("click", function(){
   outint.classList.add("active");
   inint.classList.remove("active");
