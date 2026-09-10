@@ -52,27 +52,27 @@ commentbtn.addEventListener("click", function(){
 });
 
 function animateColors(){
-  let nowon = Math.random() * 3;
+  let nowon = 1;
   setInterval(() =>{
     if (nowon <= 1){
       red.classList.add('active');
       yellow.classList.remove('active');
       green.classList.remove('active');
-      nowon = Math.random() * 3;
+      nowon = 2;
     }
     else if (nowon <= 2){
       red.classList.remove('active');
       yellow.classList.add('active');
       green.classList.remove('active');
-      nowon = Math.random() * 3;
+      nowon = 3;
     }
     else {
       red.classList.remove('active');
       yellow.classList.remove('active');
       green.classList.add('active');
-      nowon = Math.random() * 3;
+      nowon = 1;
     }
-  }, 150);
+  }, 200);
 };
 animateColors();
 
@@ -141,3 +141,6 @@ function ageUpdate(){
 }
 
 ageUpdate();
+
+
+//fff
