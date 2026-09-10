@@ -102,41 +102,41 @@ body{
 }
 .pd-section.active .smm-head .threedots .red{
   width: 12px;
-  height: 10px;
+  height: 12px;
   background-color: rgb(216, 33, 33);
   border-radius: 50%;
 }
 .pd-section.active .smm-head .threedots .yellow{
-  width: 10px;
+  width: 12px;
   height: 12px;
   background-color: rgb(240, 240, 45);
   border-radius: 50%;
 }
 .pd-section.active .smm-head .threedots .green{
   width: 12px;
-  height: 10px;
+  height: 12px;
   background-color: rgb(8, 160, 8);
   border-radius: 50%;
 }
 
 .pd-section.active .smm-head .threedots .red.active{
-  width: 10px;
+  width: 12px;
   height: 12px;
-  margin-top: 7px;
+  margin-bottom: 7px;
   background-color: rgb(216, 33, 33);
   border-radius: 50%;
 }
 .pd-section.active .smm-head .threedots .yellow.active{
   width: 12px;
-  height: 10px;
+  height: 12px;
   margin-bottom: 5px;
   background-color: rgb(240, 240, 45);
   border-radius: 50%;
 }
 .pd-section.active .smm-head .threedots .green.active{
-  width: 10px;
+  width: 12px;
   height: 12px;
-  margin-top: 5px;
+  margin-bottom: 5px;
   background-color: rgb(8, 160, 8);
   border-radius: 50%;
 }
