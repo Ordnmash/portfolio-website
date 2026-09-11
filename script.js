@@ -28,6 +28,7 @@ topmenubtn.addEventListener("click", function(){
   topmenubtn.classList.remove("active");
   righttv.classList.add("active");
 });
+
 topmenublank.addEventListener("click", function(){
   topmenushow.classList.remove("active");
   tvnames.classList.remove("notactive");
@@ -96,6 +97,7 @@ summarybtn.addEventListener("click", function(){
   topmenubtn.classList.add("active");
   righttv.classList.remove("active")
 });
+
 projectsbtn.addEventListener("click", function(){
   projectsbtn.classList.add("active");
   summarybtn.classList.remove("active");
@@ -111,6 +113,7 @@ projectsbtn.addEventListener("click", function(){
   topmenubtn.classList.add("active");
   righttv.classList.remove("active")
 });
+
 detailsbtn.addEventListener("click", function(){
   detailsbtn.classList.add("active");
   summarybtn.classList.remove("active");
