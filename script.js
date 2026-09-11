@@ -43,8 +43,10 @@ commentbtn.addEventListener("click", function(){
 
   let mycode = setInterval(() =>{
     if (commentInput.value.length > 0){
-      closeCommentbtn.classList.remove("active");
-      sendCommentbtn.classList.add("active");
+      if (commentInput.value !== ' '){
+        closeCommentbtn.classList.remove("active");
+        sendCommentbtn.classList.add("active");
+      }
     } else {
       closeCommentbtn.classList.add("active");
       sendCommentbtn.classList.remove("active");
