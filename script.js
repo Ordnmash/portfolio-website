@@ -80,7 +80,7 @@ animateColors();
 closeCommentbtn.addEventListener("click", function(){
   outint.classList.add("active");
   inint.classList.remove("active");
-  clearInterval(mycode);
+  clearInterval(mycode); // stop the interval also reduce memory
 });
 
 summarybtn.addEventListener("click", function(){
