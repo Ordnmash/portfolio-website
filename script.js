@@ -130,6 +130,7 @@ detailsbtn.addEventListener("click", function(){
 const ca = document.getElementById("current-age");
 const birthDate = new Date("2007-06-13T00:00:00Z");
 
+// running age update function 
 function ageUpdate(){
   const now = new Date();
   const ageMilliseconds = now - birthDate;
