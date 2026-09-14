@@ -41,7 +41,7 @@ commentbtn.addEventListener("click", function(){
   outint.classList.remove("active");
   inint.classList.add("active");
 
-  let mycode = setInterval(() =>{
+  let mycode = setInterval(() => {
     if (commentInput.value.length > 0){
       if (commentInput.value !== ' '){
         closeCommentbtn.classList.remove("active");
@@ -56,7 +56,7 @@ commentbtn.addEventListener("click", function(){
 
 function animateColors(){
   let nowon = 1;
-  setInterval(() =>{
+  setInterval(() => {
     if (nowon <= 1){
       red.classList.add('active');
       yellow.classList.remove('active');
@@ -113,7 +113,7 @@ projectsbtn.addEventListener("click", function(){
   tvnames.classList.remove("notactive");
   topmenublank.classList.remove("active");
   topmenubtn.classList.add("active");
-  righttv.classList.remove("active")
+  righttv.classList.remove("active");
 });
 
 detailsbtn.addEventListener("click", function(){
