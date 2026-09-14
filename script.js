@@ -129,7 +129,7 @@ detailsbtn.addEventListener("click", function(){
   tvnames.classList.remove("notactive");
   topmenublank.classList.remove("active");
   topmenubtn.classList.add("active");
-  righttv.classList.remove("active")
+  righttv.classList.remove("active");
 });
 
 const ca = document.getElementById("current-age");
