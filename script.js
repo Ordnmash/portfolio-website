@@ -62,13 +62,13 @@ function animateColors(){
       yellow.classList.remove('active');
       green.classList.remove('active');
       nowon = 2;
-    }
+    };
     else if (nowon <= 2){
       red.classList.remove('active');
       yellow.classList.add('active');
       green.classList.remove('active');
       nowon = 3;
-    }
+    };
     else {
       red.classList.remove('active');
       yellow.classList.remove('active');
