@@ -37,6 +37,8 @@ topmenublank.addEventListener("click", function(){
   righttv.classList.remove("active");
 });
 
+let mycode = null; // avoid undefined errors
+
 commentbtn.addEventListener("click", function(){
   outint.classList.remove("active");
   inint.classList.add("active");
