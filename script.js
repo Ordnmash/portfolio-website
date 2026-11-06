@@ -52,7 +52,7 @@ commentbtn.addEventListener("click", function(){
     } else {
       closeCommentbtn.classList.add("active");
       sendCommentbtn.classList.remove("active");
-    };
+    }
   }, 1);
 });
 
@@ -82,7 +82,7 @@ animateColors();
 closeCommentbtn.addEventListener("click", function(){
   outint.classList.add("active");
   inint.classList.remove("active");
-  clearInterval(mycode); // stop the interval also reduce memory
+  clearInterval(mycode);
 });
 
 summarybtn.addEventListener("click", function(){
@@ -97,7 +97,7 @@ summarybtn.addEventListener("click", function(){
   tvnames.classList.remove("notactive");
   topmenublank.classList.remove("active");
   topmenubtn.classList.add("active");
-  righttv.classList.remove("active")
+  righttv.classList.remove("active");
 });
 
 projectsbtn.addEventListener("click", function(){
